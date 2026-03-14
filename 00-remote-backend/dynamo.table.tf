@@ -4,8 +4,8 @@ resource "aws_dynamodb_table" "this" {
   hash_key     = var.remote_backend.dynamodb_hash_key
 
   attribute {
-    name = "LockId"
-    type = "S"
+    name = var.remote_backend.dynamodb_hash_key
+    type = var.remote_backend.dynamodb_hash_key_type
   }
 
   tags = {

@@ -24,8 +24,15 @@ Curso de aws devops, mentoria do Kenerry Serain
 Remote backend - é o ato de salvar o terraform tf.state remotamente em algum lugar resolve o problema de duplicidade do terraform state.
 State locking - é o ato de bloquear execução simultânea de uma mesma stack do terraform.
 
-Para fazer o rollback basta baixar a versao no 
+Para fazer o rollback basta baixar a versao no
 
 Com isso faz o enfileramento de requisições
 ![alt text](./images/image-1.png)
 https://developer.hashicorp.com/terraform/language/backend/remote
+
+# Redes
+
+![alt text](./images/image.png)
+
+
+´´´scp -i "workshop-march-key-pair-virg.pem" workshop-march-key-pair-virg.pem ec2-user@18.204.203.129:/home/ec2-user´´´

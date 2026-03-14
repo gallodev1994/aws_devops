@@ -11,18 +11,20 @@ terraform {
     key    = "01-networking/terraform.tfstate"
     region = "us-east-1"
     use_lockfile = true
-    #dynamodb_table = "wor"
+    #dynamodb_table = "workshop-march-state-locking-table"
   }
 
 }
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "us-east-1"
+  region = var.assume_role.region
   default_tags {
 
   }
+
+  #boa pratica conectar usando a role ao inves de usar as credenciais
   assume_role {
-    role_arn = "arn:aws:iam::110044885980:role/workshop-march-role"
+    role_arn = var.assume_role.arn
   }
 }

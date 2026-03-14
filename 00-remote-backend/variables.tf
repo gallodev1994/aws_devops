@@ -13,7 +13,7 @@ variable "assume_role" {
   })
 
   default = {
-    arn    = "arn:aws:iam::654654554686:role/workshop-march-role"
+    arn    = "arn:aws:iam::110044885980:role/workshop-march-role"
     region = "us-east-1"
   }
 }
@@ -31,7 +31,7 @@ variable "remote_backend" {
     s3_bucket_name = "workshop-march-sample-bucket"
     dynamodb_table_name = "workshop-march-state-locking-table"
     dynamodb_billing_mode = "PAY_PER_REQUEST"
-    dynamodb_hash_key = "LockId"
+    dynamodb_hash_key = "LockID"
     dynamodb_hash_key_type = "S"
   }
 }
